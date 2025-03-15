@@ -2,7 +2,7 @@
 import React from "react";
 import { Heart, Instagram } from "lucide-react";
 import FadeIn from "@/components/animations/FadeIn";
-import { Button } from "@/components/ui/button"; // Replace CustomButton with regular Button
+import { Button } from "@/components/ui/button";
 
 const InstagramFeed = () => {
   const instagramImages = [

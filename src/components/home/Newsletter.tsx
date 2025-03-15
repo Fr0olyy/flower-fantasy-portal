@@ -1,7 +1,7 @@
 
 import React, { FormEvent } from "react";
 import FadeIn from "@/components/animations/FadeIn";
-import { Button } from "@/components/ui/button"; // Replace CustomButton with regular Button
+import { Button } from "@/components/ui/button";
 
 const Newsletter = () => {
   const handleSubmit = (e: FormEvent) => {

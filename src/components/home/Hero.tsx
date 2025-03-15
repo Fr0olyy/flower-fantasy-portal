@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import FadeIn from "@/components/animations/FadeIn";
-import CustomButton from "@/components/ui/CustomButton";
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
@@ -41,29 +41,24 @@ const Hero = () => {
           
           <FadeIn delay={400} direction="up">
             <div className="flex flex-wrap gap-4">
-              <CustomButton 
-                variant="floral" 
-                size="wide"
-                asChild
+              <Button 
+                variant="default"
+                className="bg-floral-400 text-white hover:bg-floral-500 transition-all duration-300 py-3 px-8 w-full sm:w-auto min-w-40"
               >
                 <Link to="/products">
                   Shop Collections
                 </Link>
-              </CustomButton>
+              </Button>
               
-              <CustomButton 
+              <Button 
                 variant="outline" 
-                size="wide"
-                asChild
-                className="group"
+                className="group py-3 px-8 w-full sm:w-auto min-w-40"
               >
-                <Link to="/about">
-                  <span className="flex items-center">
-                    Learn More 
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
+                <Link to="/about" className="flex items-center">
+                  Learn More 
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </CustomButton>
+              </Button>
             </div>
           </FadeIn>
         </div>
