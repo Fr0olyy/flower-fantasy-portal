@@ -10,6 +10,7 @@ interface CustomButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement
   className?: string;
   loading?: boolean;
   icon?: React.ReactNode;
+  asChild?: boolean;
 }
 
 const CustomButton = ({
@@ -19,6 +20,7 @@ const CustomButton = ({
   className,
   loading = false,
   icon,
+  asChild = false,
   ...props
 }: CustomButtonProps) => {
   const getVariantClasses = () => {
@@ -46,6 +48,7 @@ const CustomButton = ({
         className
       )}
       disabled={loading || props.disabled}
+      asChild={asChild}
       {...props}
     >
       {loading && (
