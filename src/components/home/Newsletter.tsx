@@ -1,9 +1,14 @@
 
-import React from "react";
+import React, { FormEvent } from "react";
 import FadeIn from "@/components/animations/FadeIn";
-import CustomButton from "@/components/ui/CustomButton";
+import { Button } from "@/components/ui/button"; // Replace CustomButton with regular Button
 
 const Newsletter = () => {
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    // Add form handling logic here
+  };
+
   return (
     <section className="py-16 bg-floral-500 text-white">
       <div className="content-wrapper">
@@ -14,16 +19,16 @@ const Newsletter = () => {
               Subscribe to receive updates, access to exclusive deals, and more.
             </p>
             
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Your email address"
                 className="px-4 py-3 w-full rounded-md text-foreground"
                 required
               />
-              <CustomButton type="submit" className="bg-white text-floral-500 hover:bg-floral-100">
+              <Button type="submit" className="bg-white text-floral-500 hover:bg-floral-100">
                 Subscribe
-              </CustomButton>
+              </Button>
             </form>
           </FadeIn>
         </div>

@@ -2,7 +2,7 @@
 import React from "react";
 import { Heart, Instagram } from "lucide-react";
 import FadeIn from "@/components/animations/FadeIn";
-import CustomButton from "@/components/ui/CustomButton";
+import { Button } from "@/components/ui/button"; // Replace CustomButton with regular Button
 
 const InstagramFeed = () => {
   const instagramImages = [
@@ -47,14 +47,13 @@ const InstagramFeed = () => {
         </div>
         
         <div className="mt-8 text-center">
-          <CustomButton 
+          <Button 
             variant="outline" 
-            size="wide"
             className="border-floral-300 hover:border-floral-400 hover:bg-floral-100"
-            icon={<Instagram className="h-4 w-4" />}
           >
+            <Instagram className="h-4 w-4 mr-2" />
             Follow @floristica
-          </CustomButton>
+          </Button>
         </div>
       </div>
     </section>
